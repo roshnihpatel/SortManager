@@ -2,7 +2,7 @@ package com.sparta.rp.sorters;
 
 import java.util.Arrays;
 
-public class BubbleSort implements Sorter {
+public class BubbleSorter implements Sorter {
 
     @Override
     public int[] sortArray(int[] arrToSort) {
