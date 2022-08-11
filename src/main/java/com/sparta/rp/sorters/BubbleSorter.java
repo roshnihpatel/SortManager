@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class BubbleSorter implements Sorter {
 
+
     @Override
     public int[] sortArray(int[] arrToSort) {
 
@@ -12,7 +13,7 @@ public class BubbleSorter implements Sorter {
             for(int loops= 0; loops < arrToSort.length-1; loops++){
                 sortedArray= oneIterationSort(sortedArray);
             }
-            System.out.println("Values are "+ Arrays.toString(sortedArray));
+
             return sortedArray;
 
     }
