@@ -8,7 +8,7 @@ public class SortFactory {
     public static Sorter getSorter(int option) throws SorterLoaderException {
         return switch (option) {
             case 1 -> new BubbleSorter();
-            default -> throw new SorterLoaderException(option + "is an invalid selection");
+            default -> throw new SorterLoaderException(option + " is an invalid selection");
         };
 
 
