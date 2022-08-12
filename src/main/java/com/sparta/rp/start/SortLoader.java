@@ -6,7 +6,7 @@ import java.util.logging.LogManager;
 
 public class SortLoader {
     public static void startSortManager() {
-        //LogManager.getLogManager().reset();
+        LogManager.getLogManager().reset();
 
         DisplaySortManager.userInterface();
     }
