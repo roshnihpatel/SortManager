@@ -17,9 +17,9 @@ public class DisplaySortManager {
     public static void userInterface() {
 
         System.out.println("Welcome to Sort Manager");
-        while (sorterSelection != 4) {
+        while (sorterSelection != UserSelection.getQuitOptionNumber()) {
             sorterSelection = UserSelection.makeSorterSelection(userInput);
-            if (sorterSelection == 4) {
+            if (sorterSelection == UserSelection.getQuitOptionNumber()) {
                 System.out.println("Goodbye");
                 break;
             }

@@ -3,7 +3,7 @@ package com.sparta.rp.display;
 import java.util.Scanner;
 
 public class UserSelection {
-    public static String[] nameOfSorters = {"Bubble Sort", "Binary Sort", "Insertion Sort", "Quit"};
+    public static String[] nameOfSorters = {"Bubble Sort", "Binary Sort", "Insertion Sort" ,"Quick Sort", "Quit"};
 
     public static int makeSorterSelection(Scanner userInput) {
         System.out.println("Please select an option");
@@ -25,4 +25,9 @@ public class UserSelection {
     public static String getSelectedSortedName(int option){
         return nameOfSorters[option-1];
     }
+    public static int getQuitOptionNumber(){
+        return nameOfSorters.length;
+    }
+
+
 }

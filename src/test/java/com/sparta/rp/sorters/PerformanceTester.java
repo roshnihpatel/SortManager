@@ -7,16 +7,23 @@ import org.junit.jupiter.api.Test;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.logging.LogManager;
 
 public class PerformanceTester {
+
     public static int[] unsortedArray = new int[100];
 
     @BeforeAll
     public static void getRandomArray() {
+
         Random rando = new Random();
         for (int i = 0; i < unsortedArray.length; i++) {
             unsortedArray[i] = rando.nextInt(1001);
         }
+    }
+    @BeforeAll static void resetLogs(){
+        LogManager.getLogManager().reset();
+
     }
 
 
@@ -71,6 +78,21 @@ public class PerformanceTester {
         System.out.println("================\nInsertion Sort\n================");
         System.out.println("Array To Sort: " + Arrays.toString(arrayToSort));
         Sorter sorter = new InsertionSorter();
+        double start = System.nanoTime();
+        int[] sortedArray = sorter.sortArray(arrayToSort);
+        double finish = System.nanoTime();
+        double timeTaken = (finish - start) / 1000000;
+        System.out.println("Sorted Array: " + Arrays.toString(sortedArray));
+        System.out.println("Time to sort : " + timeTaken + "ms\n");
+
+    }
+    @Test
+    public void QuickSorterTime() {
+        int[] arrayToSort = unsortedArray.clone();
+
+        System.out.println("================\nQuick Sort\n================");
+        System.out.println("Array To Sort: " + Arrays.toString(arrayToSort));
+        Sorter sorter = new QuickSorter();
         double start = System.nanoTime();
         int[] sortedArray = sorter.sortArray(arrayToSort);
         double finish = System.nanoTime();
