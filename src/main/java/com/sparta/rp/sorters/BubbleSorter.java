@@ -8,13 +8,13 @@ public class BubbleSorter implements Sorter {
     @Override
     public int[] sortArray(int[] arrToSort) {
 
-            int[] sortedArray = new int[arrToSort.length];
-            System.arraycopy(arrToSort, 0, sortedArray,0, arrToSort.length);
+
+
             for(int loops= 0; loops < arrToSort.length-1; loops++){
-                sortedArray= oneIterationSort(sortedArray);
+                arrToSort= oneIterationSort(arrToSort);
             }
 
-            return sortedArray;
+            return arrToSort;
 
     }
     private static int[] oneIterationSort(int[] unsortedArray){
