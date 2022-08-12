@@ -50,6 +50,20 @@ public class PerformanceTester {
         System.out.println("Time to sort : " + timeTaken + "ms\n");
 
     }
+    @Test
+    public void BinarySorterTime() {
+        int[] arrayToSort = unsortedArray.clone();
+        Sorter sorter = new BubbleSorter();
+        long start = System.nanoTime();
+        int[] sortedArray = sorter.sortArray(arrayToSort);
+        long finish = System.nanoTime();
+        long timeTaken = (finish - start) / 10000;
+        System.out.println("================\nBinary Sort\n================");
+        System.out.println("Array To Sort: " + Arrays.toString(arrayToSort));
+        System.out.println("Sorted Array: " + Arrays.toString(sortedArray));
+        System.out.println("Time to sort : " + timeTaken + "ms\n");
+
+    }
 
 
 }

@@ -6,7 +6,7 @@ public  class UserSelection {
 
     public static int makeSorterSelection( Scanner userInput) {
         System.out.println("Please select an option");
-        System.out.println("1: Bubble Sort \n3: Quit");
+        System.out.println("1: Bubble Sort\n2: Binary Tree Sort \n3: Quit");
         int option = userInput.nextInt();
 
         return option;
