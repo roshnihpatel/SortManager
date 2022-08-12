@@ -15,9 +15,10 @@ public class BubbleSorter implements Sorter {
 
         handler.setLevel(Level.ALL);
         logger.addHandler(handler);
-
         logger.setUseParentHandlers(false);
-        logger.setLevel(Level.FINE);
+        logger.setLevel(Level.ALL);
+        Sorter bubbleSort = new BubbleSorter();
+        bubbleSort.sortArray(new int[]{5, 2, 4, 7, 1, 2});
 
     }
 
@@ -26,7 +27,7 @@ public class BubbleSorter implements Sorter {
     public int[] sortArray(int[] unsortedArray) {
        int[] arrToSort = unsortedArray.clone();
 
-        logger.log(Level.INFO,"This is the array to sort: " + Arrays.toString(arrToSort));
+        logger.log(Level.INFO,"This is the array to sort: " + Arrays.toString(unsortedArray));
 
             for(int loops= 0; loops < arrToSort.length-1; loops++){
                 arrToSort= oneIterationSort(arrToSort);

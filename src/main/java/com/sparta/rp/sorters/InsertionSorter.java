@@ -16,9 +16,10 @@ public class InsertionSorter implements Sorter{
 
         handler.setLevel(Level.ALL);
         logger.addHandler(handler);
-
         logger.setUseParentHandlers(false);
         logger.setLevel(Level.ALL);
+        Sorter insertionSort = new InsertionSorter();
+        insertionSort.sortArray(new int[]{5, 2, 4, 7, 1, 2});
 
     }
     @Override

@@ -11,7 +11,7 @@ public class SorterTester {
 
     @BeforeEach
     public void getSorter() throws SorterLoaderException {
-        sorter = SortFactory.getSorter(3);
+        sorter = SortFactory.getSorter(4);
     }
     @Test
     @DisplayName("Given an array with an odd length return the the sorted array")

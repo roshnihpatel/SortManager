@@ -20,9 +20,9 @@ public class BinaryTreeImpl implements BinaryTree, Sorter {
 
         logger.setLevel(Level.ALL);
 
-//        int[] unsortedArray = {-1, -14, 6, 21, -65, 15, 3, 100, -10};
-//        BinaryTreeImpl binaryTree = new BinaryTreeImpl();
-//        int[] sortedArray = binaryTree.sortArray(unsortedArray);
+
+      BinaryTreeImpl binaryTree = new BinaryTreeImpl();
+      binaryTree.sortArray(new int[]{5, 2, 4, 7, 1, 2});
 
 
     }
@@ -208,20 +208,15 @@ public class BinaryTreeImpl implements BinaryTree, Sorter {
 
     @Override
     public int[] sortArray(int[] unsortedArray) {
+        logger.log(Level.INFO, "This is the array to sort" + Arrays.toString(unsortedArray));
         int[] arrToSort = unsortedArray.clone();
         addElements(arrToSort);
-        int[] sortedAscArray = new int[arrToSort.length];
-        //System.out.println(getNumberOfElements());
-
-        orderAsc(rootNode, sortedAscArray, 0);
-        logger.log(Level.INFO, "This is the array to sort" + Arrays.toString(arrToSort));
-        logger.log(Level.INFO, "This is the sorted array" + Arrays.toString(sortedAscArray));
-        //System.out.println(Arrays.toString(sortedAscArray));
-
-        return sortedAscArray;
+        orderAsc(rootNode, arrToSort, 0);
+        logger.log(Level.INFO, "This is the sorted array" + Arrays.toString(arrToSort));
+        return arrToSort;
     }
     public class Node {
-        private final int value; //variable are class level a normally private
+        private final int value;
         private Node leftChild;
         private Node rightChild;
 
