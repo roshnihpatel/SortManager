@@ -29,7 +29,7 @@ public class DisplaySortManager {
                 arrayLengthSelection = UserSelection.makeArrayLengthSelection(userInput);
                 int[] arrToSort = RandomArrayGenerator.getArrayOfSelectedLength(arrayLengthSelection);
 
-                DisplaySorter.printSorting(arrToSort, sorter);
+                DisplaySorter.printSorting(arrToSort, sorter, sorterSelection);
             } catch (SorterLoaderException e) {
                 System.out.println(e.getMessage());
             }
