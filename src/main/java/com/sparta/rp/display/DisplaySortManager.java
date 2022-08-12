@@ -17,20 +17,20 @@ public class DisplaySortManager {
     public static void userInterface() {
 
         System.out.println("Welcome to Sort Manager");
-        while (sorterSelection != 3) {
+        while (sorterSelection != 4) {
             sorterSelection = UserSelection.makeSorterSelection(userInput);
-            if (sorterSelection == 3) {
+            if (sorterSelection == 4) {
                 System.out.println("Goodbye");
                 break;
             }
-            try{
+            try {
+
+                Sorter sorter = SortFactory.getSorter(sorterSelection);
                 arrayLengthSelection = UserSelection.makeArrayLengthSelection(userInput);
                 int[] arrToSort = RandomArrayGenerator.getArrayOfSelectedLength(arrayLengthSelection);
-                Sorter sorter = SortFactory.getSorter(sorterSelection);
-
 
                 DisplaySorter.printSorting(arrToSort, sorter);
-            }catch (SorterLoaderException e){
+            } catch (SorterLoaderException e) {
                 System.out.println(e.getMessage());
             }
 
@@ -38,9 +38,6 @@ public class DisplaySortManager {
         }
 
     }
-
-
-
 
 
 }

@@ -23,13 +23,13 @@ public class PerformanceTester {
     @Test
     public void BubbleSorterTime() {
         int[] arrayToSort = unsortedArray.clone();
-        Sorter sorter = new BubbleSorter();
-        long start = System.nanoTime();
-        int[] sortedArray = sorter.sortArray(arrayToSort);
-        long finish = System.nanoTime();
-        long timeTaken = (finish - start) / 10000;
         System.out.println("================\nBubble Sort\n================");
         System.out.println("Array To Sort: " + Arrays.toString(arrayToSort));
+        Sorter sorter = new BubbleSorter();
+        double start = System.nanoTime();
+        int[] sortedArray = sorter.sortArray(arrayToSort);
+        double finish = System.nanoTime();
+        double timeTaken = (finish - start) / 1000000;
         System.out.println("Sorted Array: " + Arrays.toString(sortedArray));
         System.out.println("Time to sort : " + timeTaken + "ms\n");
 
@@ -38,28 +38,42 @@ public class PerformanceTester {
     @Test
     public void JavaSorterTime() {
         int[] arrayToSort = unsortedArray.clone();
-        System.out.println("================\nJava Sorter\n================");
+        System.out.println("================\nJava Sort\n================");
         System.out.println("Array To Sort: " + Arrays.toString(arrayToSort));
-
-        long start = System.nanoTime();
+        double start = System.nanoTime();
         Arrays.sort(arrayToSort);
-        long finish = System.nanoTime();
-        long timeTaken = (finish - start) / 10000;
-
+        double finish = System.nanoTime();
+        double timeTaken = (finish - start) / 1000000;
         System.out.println("Sorted Array: " + Arrays.toString(arrayToSort));
         System.out.println("Time to sort : " + timeTaken + "ms\n");
 
     }
+
     @Test
     public void BinarySorterTime() {
         int[] arrayToSort = unsortedArray.clone();
-        Sorter sorter = new BubbleSorter();
-        long start = System.nanoTime();
-        int[] sortedArray = sorter.sortArray(arrayToSort);
-        long finish = System.nanoTime();
-        long timeTaken = (finish - start) / 10000;
         System.out.println("================\nBinary Sort\n================");
         System.out.println("Array To Sort: " + Arrays.toString(arrayToSort));
+        Sorter sorter = new BubbleSorter();
+        double start = System.nanoTime();
+        int[] sortedArray = sorter.sortArray(arrayToSort);
+        double finish = System.nanoTime();
+        double timeTaken = (finish - start) / 1000000;
+        System.out.println("Sorted Array: " + Arrays.toString(sortedArray));
+        System.out.println("Time to sort : " + timeTaken + "ms\n");
+
+    }
+
+    @Test
+    public void InsertionSorterTime() {
+        int[] arrayToSort = unsortedArray.clone();
+        System.out.println("================\nInsertion Sort\n================");
+        System.out.println("Array To Sort: " + Arrays.toString(arrayToSort));
+        Sorter sorter = new InsertionSorter();
+        double start = System.nanoTime();
+        int[] sortedArray = sorter.sortArray(arrayToSort);
+        double finish = System.nanoTime();
+        double timeTaken = (finish - start) / 1000000;
         System.out.println("Sorted Array: " + Arrays.toString(sortedArray));
         System.out.println("Time to sort : " + timeTaken + "ms\n");
 

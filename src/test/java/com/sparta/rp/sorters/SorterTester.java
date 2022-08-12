@@ -11,7 +11,7 @@ public class SorterTester {
 
     @BeforeEach
     public void getSorter() throws SorterLoaderException {
-        sorter = SortFactory.getSorter(2);
+        sorter = SortFactory.getSorter(3);
     }
 
     @Test
