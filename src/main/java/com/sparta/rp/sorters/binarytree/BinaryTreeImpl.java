@@ -15,8 +15,10 @@ public class BinaryTreeImpl implements BinaryTree, Sorter {
 
     public static void main(String[] args) {
         logger.addHandler(handler);
-        handler.setLevel(Level.OFF);
-        logger.setLevel(Level.OFF);
+        handler.setLevel(Level.ALL);
+        logger.setUseParentHandlers(false);
+
+        logger.setLevel(Level.ALL);
 
 //        int[] unsortedArray = {-1, -14, 6, 21, -65, 15, 3, 100, -10};
 //        BinaryTreeImpl binaryTree = new BinaryTreeImpl();
@@ -205,7 +207,8 @@ public class BinaryTreeImpl implements BinaryTree, Sorter {
     }
 
     @Override
-    public int[] sortArray(int[] arrToSort) {
+    public int[] sortArray(int[] unsortedArray) {
+        int[] arrToSort = unsortedArray.clone();
         addElements(arrToSort);
         int[] sortedAscArray = new int[arrToSort.length];
         //System.out.println(getNumberOfElements());

@@ -67,6 +67,7 @@ public class PerformanceTester {
     @Test
     public void InsertionSorterTime() {
         int[] arrayToSort = unsortedArray.clone();
+
         System.out.println("================\nInsertion Sort\n================");
         System.out.println("Array To Sort: " + Arrays.toString(arrayToSort));
         Sorter sorter = new InsertionSorter();
