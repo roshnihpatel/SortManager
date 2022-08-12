@@ -10,14 +10,17 @@ import java.util.logging.Logger;
 
 public class BinaryTreeImpl implements BinaryTree, Sorter {
     private static final Logger logger = Logger.getLogger("BinaryTree logger");
+    private static ConsoleHandler handler = new ConsoleHandler();
+
 
     public static void main(String[] args) {
-        ConsoleHandler handler = new ConsoleHandler();
         logger.addHandler(handler);
-        handler.setLevel(Level.ALL);
-        int[] unsortedArray = {-1, -14, 6, 21, -65, 15, 3, 100, -10};
-        BinaryTreeImpl binaryTree = new BinaryTreeImpl();
-        int[] sortedArray = binaryTree.sortArray(unsortedArray);
+        handler.setLevel(Level.OFF);
+        logger.setLevel(Level.OFF);
+
+//        int[] unsortedArray = {-1, -14, 6, 21, -65, 15, 3, 100, -10};
+//        BinaryTreeImpl binaryTree = new BinaryTreeImpl();
+//        int[] sortedArray = binaryTree.sortArray(unsortedArray);
 
 
     }
