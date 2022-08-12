@@ -24,7 +24,7 @@ public class SorterTester {
     }
     @Test
     @DisplayName("Given an array with an even length return the the sorted array")
-    void givenAnArrayWithAnEvennumberOfElementReturnTheSortedArray() {
+    void givenAnArrayWithAnEvenNumberOfElementReturnTheSortedArray() {
         int[] unsortedArray = {11, 74, 13, 64, 37, 75, 2, 41};
         int[] expected = {2, 11, 13, 37, 41, 64, 74, 75};
         int[] answer = sorter.sortArray(unsortedArray);
